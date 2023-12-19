@@ -10,7 +10,7 @@ class LLM():
         
         if model == 'llama':
             self.model_path = "meta-llama/Llama-2-"+llama_size+"-chat-hf"
-            access_token = "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"
+            access_token = "ENTER YOUR ACCESS TOKEN HERE"
             self.model = AutoModelForCausalLM.from_pretrained(self.model_path, device_map="auto", load_in_4bit=True,  use_auth_token=access_token)
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_path, use_fast=True, use_auth_token=access_token)
             self.seq_length = 4096
